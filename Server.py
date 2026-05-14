@@ -20,7 +20,7 @@ UDP clients. Utilizes YOLOv8 for object detection and BLIP for scene description
 
 # Global Configuration & Caching
 label_cache = {}
-COOLDOWN_SECONDS = 3
+COOLDOWN_SECONDS = 4
 
 # AI Model Placeholders (Lazy Loading)
 yolo_model = None
