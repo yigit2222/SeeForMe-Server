@@ -20,7 +20,7 @@ UDP clients. Utilizes YOLOv8 for object detection and BLIP for scene description
 
 # Global Configuration & Caching
 label_cache = {}
-COOLDOWN_SECONDS = 5
+COOLDOWN_SECONDS = 3
 
 # AI Model Placeholders (Lazy Loading)
 yolo_model = None
@@ -34,7 +34,7 @@ def load_ai_models():
     global yolo_model, blip_processor, blip_model
     if yolo_model is None:
         print("🧠 Loading YOLO & BLIP AI Models...")
-        yolo_model = YOLO("yolov8m.pt")
+        yolo_model = YOLO("yolov8l.pt")
         blip_processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
         blip_model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
         print("✅ Models Loaded Successfully.")
@@ -122,7 +122,7 @@ def process_frame_for_user(payload, session, server_socket):
             session.last_spoken_time = current_time
 
         # Object Detection (YOLOv8)
-        results = yolo_model(frame, conf=0.25, verbose=False)
+        results = yolo_model(frame, conf=0.35, verbose=False)
         detections = []
 
         for box in results[0].boxes:
