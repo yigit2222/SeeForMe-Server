@@ -1,14 +1,14 @@
-# SeeForMe: AI-Driven Assistive Technology
+# SeeForMe: AI Driven Assistive Technology
 
-**SeeForMe** is a real-time AI assistant designed specifically for individuals with visual disabilities. It acts as a smart "digital eye," capturing live video streams from a smartphone and converting that visual data into spoken audio descriptions. By combining computer vision and natural language processing, the system analyzes the environment, identifies objects, and tells the user exactly what is happening around them in real time.
+**SeeForMe** is a real time AI assistant designed specifically for individuals with visual disabilities. It acts as a smart "digital eye," capturing live video streams from a smartphone and converting that visual data into spoken audio descriptions. By combining computer vision and natural language processing, the system analyzes the environment, identifies objects, and tells the user exactly what is happening around them in real time.
 
 ## 🚀 Key Features
 
-* **Real-Time Object Detection:** Utilizes **YOLOv8l** for high-speed and accurate spatial labeling.
+* **Real Time Object Detection:** Utilizes **YOLOv8l** for high speed and accurate spatial labeling.
 * **Scene Captioning:** Uses **BLIP** (Bootstrapping Language-Image Pre-training) to generate deep, contextual descriptions of the entire environment.
-* **Multi-User Scalability:** A robust Python backend manages concurrent sessions, isolating user data such as language and speech rate.
-* **Low-Latency Communication:** Implements a custom **UDP protocol** with a "Magic Byte" system to prioritize the most current frames and commands over packet reliability.
-* **Accessibility First:** Designed according to **ISO 9241** standards, featuring high-contrast themes (OLED Comfort, Low Glare) and haptic feedback.
+* **Multi User Scalability:** A robust Python backend manages concurrent sessions, isolating user data such as language and speech rate.
+* **Low Latency Communication:** Implements a custom **UDP protocol** with a "Magic Byte" system to prioritize the most current frames and commands over packet reliability.
+* **Accessibility First:** Designed according to **ISO 9241** standards, featuring high contrast themes (OLED Comfort, Low Glare) and haptic feedback.
 * **Multilingual Support:** Integrated support for English, Turkish, German, and more via **gTTS** and **Deep Translator**.
 
 ## 🏗️ System Architecture
@@ -22,22 +22,22 @@ The project follows a **Client-Server architecture** optimized for mobile perfor
 
 ### Mobile Client (Flutter)
 * **Reactive UI:** Uses `ValueNotifiers` to update bounding boxes and status without interrupting the camera stream.
-* **Hysteresis Flash Control:** Implements a software-based algorithm to prevent camera flash flickering in low-light environments by managing luminance thresholds.
+* **Hysteresis Flash Control:** Implements a software based algorithm to prevent camera flash flickering in low light environments by managing luminance thresholds.
 
 ## 🛠️ Used Technologies
 
-* **Flutter & Dart:** For a responsive, cross-platform mobile interface.
+* **Flutter & Dart:** For a responsive, cross platform mobile interface.
 * **Python:** The core backend language for AI hosting and socket management.
-* **Ultralytics YOLOv8l:** Advanced real-time object detection.
-* **Hugging Face Transformers (BLIP):** For image-to-text synthesis.
-* **Google Text-to-Speech (gTTS):** For clear, multilingual audio feedback.
+* **Ultralytics YOLOv8l:** Advanced real time object detection.
+* **Hugging Face Transformers (BLIP):** For image to text synthesis.
+* **Google Text to Speech (gTTS):** For clear, multilingual audio feedback.
 
 ## 📊 Test Results
 
 The system underwent rigorous validation according to **ISO/IEC/IEEE 29119** standards:
-* **100% Pass Rate:** Successfully passed all 10 core functional test cases, including end-to-end workflow and network failure handling.
+* **100% Pass Rate:** Successfully passed all 10 core functional test cases, including end to end workflow and network failure handling.
 * **Automated Suites:** Verified by 17 automated mobile unit tests and 7 automated server unit tests.
-* **Performance:** End-to-end latency remains consistently under the safety-critical 3-second threshold.
+* **Performance:** End to end latency remains consistently under the safety critical 4 second threshold.
 
 ## 📂 Installation & Setup
 
@@ -48,8 +48,9 @@ The system underwent rigorous validation according to **ISO/IEC/IEEE 29119** sta
 
 ### Mobile
 1. Install the Flutter SDK.
-2. Connect an Android device and run: `flutter run --release`.
-3. Configure the Server IP in the application settings.
+2. Connect an Android device and fetch dependencies: `flutter pub get`.
+3. Run the application: `flutter run --release`.
+4. Configure the Server IP in the application settings.
 
 ## 👥 The Team
 * **İkra Yiğit Karaman**
