@@ -60,4 +60,4 @@ The system underwent rigorous validation according to **ISO/IEC/IEEE 29119** sta
 **Mentor:** Prof. Dr. Gökçe Nur Yılmaz
 
 ---
-*Developed as a Final Project for the Department of Software Engineering and Computer Engineering at TED University.*
+*Developed as a Final Project for the Departments of Software Engineering and Computer Engineering at TED University.*
